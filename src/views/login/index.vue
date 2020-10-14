@@ -98,7 +98,8 @@ export default {
     return {
       loginForm: {
         username: 'admin',
-        password: '111111'
+        // password: '111111'
+        password: 'test123890'
       },
       loginRules: {
         username: [{ required: true, trigger: 'blur', validator: validateUsername }],
@@ -155,9 +156,11 @@ export default {
     handleLogin() {
       this.$refs.loginForm.validate(valid => {
         if (valid) {
+          console.log('登陆')
           this.loading = true
           this.$store.dispatch('user/login', this.loginForm)
             .then(() => {
+              console.log('登陆重定向 ')
               this.$router.push({ path: this.redirect || '/', query: this.otherQuery })
               this.loading = false
             })
