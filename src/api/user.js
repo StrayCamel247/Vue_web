@@ -10,11 +10,12 @@ export function login(data) {
   })
 }
 
-export function getInfo(token) {
+export function getInfo(data) {
+  console.log('根据jwt获取user信息')
   return request({
-    url: 'apis/account/user_info',
-    method: 'get',
-    params: { token }
+    url: 'apis/account/user_info/',
+    method: 'post',
+    data
   })
 }
 
