@@ -7,9 +7,11 @@ import echarts from 'echarts'
 require('echarts/theme/macarons') // echarts theme
 import resize from './mixins/resize'
 
+import { getDashboardBarChartDataApis } from '@/api/dashboard/PanelGroup'
 const animationDuration = 6000
 
 export default {
+
   mixins: [resize],
   props: {
     className: {
@@ -42,7 +44,26 @@ export default {
     this.chart.dispose()
     this.chart = null
   },
+  created() {
+    this.getBarChartData()
+  },
   methods: {
+    // 请求查询KPI接口
+    getBarChartData() {
+      getDashboardBarChartDataApis().then(res => {
+        // this.kpiLoading = false
+        this.kpiTitle = res.content.title
+        console.log(this.kpiTitle)
+        this.kpiList = JSON.parse(JSON.stringify(res.content.option))
+        for (const i in this.kpiList) {
+          this.kpiList[i].kpiLoading = true
+          // let obj = JSON.parse(JSON.stringify())
+          // obj.indicator = this.kpiList[i].key
+          const obj = this.kpiList[i].key
+          this.setKpiValue(obj, i)
+        }
+      })
+    },
     initChart() {
       this.chart = echarts.init(this.$el, 'macarons')
 
@@ -97,6 +118,5 @@ export default {
         }]
       })
     }
-  }
-}
+  }}
 </script>
