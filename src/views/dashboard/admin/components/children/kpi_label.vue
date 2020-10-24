@@ -81,9 +81,9 @@ export default {
       }
     },
     mainNumber: {
-      type: String,
+      type: Number,
       require: true,
-      default: ''
+      default: 0
     },
     kpiLoading: {
       type: Boolean,
