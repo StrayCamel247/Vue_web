@@ -21,7 +21,7 @@
 </template>
 
 <script>
-import { transactionList } from '@/api/dashboard/TransactionTable'
+import { transactionList } from '@/api/dashboard'
 
 export default {
   filters: {

@@ -7,7 +7,7 @@ import echarts from 'echarts'
 require('echarts/theme/macarons') // echarts theme
 import resize from './mixins/resize'
 
-import { getDashboardBarChartDataApis } from '@/api/dashboard/PanelGroup'
+import { getDashboardBarChartDataApis } from '@/api/dashboard'
 const animationDuration = 6000
 
 export default {

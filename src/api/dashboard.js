@@ -1,4 +1,11 @@
 import request from '@/utils/request'
+export function transactionList(page) {
+  return request({
+    url: '/apis/dashboard/TransactionTable',
+    method: 'get',
+    params: { page }
+  })
+}
 
 export function getIndicator() {
   return request({

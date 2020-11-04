@@ -45,8 +45,10 @@ service.interceptors.response.use(
    * You can also judge the status by HTTP Status Code
    */
   response => {
+    console.log('请求解析')
+    // console.log(response)e
     const res = response.data
-    console.log(res.status_code)
+    // console.log(res.status_code)
     // if the custom code is not 200, it is judged as an error.
     if (res.status_code !== 200) {
       Message({

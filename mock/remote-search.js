@@ -30,7 +30,7 @@ module.exports = [
 
   // transaction list
   {
-    url: '/vue-element-admin/transaction/list',
+    url: '/vue-element-admin/dashboard/TransactionTable',
     type: 'get',
     response: _ => {
       return {

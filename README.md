@@ -7,6 +7,7 @@
 
 
 ## 👻Version_V2.0
+
 > 此项目基于[**花裤衩的vue-eladmin**](https://github.com/PanJiaChen/vue-element-admin/blob/master/README.zh-CN.md)二次开发，属于源码学习，遵守开源规则
 
 ### 项目目录
@@ -46,7 +47,7 @@
 ## 项目运行
 
 - 克隆项目
-`git clone https://github.com/PanJiaChen/vue-element-admin.git`
+`git clone https://github.com/StrayCamel247/Vue_web.git`
 
 - 进入项目目录
 `cd vue-element-admin`

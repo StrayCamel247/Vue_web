@@ -10,7 +10,7 @@ export function searchUser(name) {
 
 // export function transactionList(page) {
 //   return request({
-//     url: '/apis/transaction/list/',
+//     url: '/apis/dashboard/TransactionTable/',
 //     method: 'get',
 //     params: { page }
 //   })

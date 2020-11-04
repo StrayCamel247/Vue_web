@@ -53,7 +53,7 @@
 
 <script>
 import KpiLabel from './children/kpi_label'
-import { getIndicator, getKpiValue } from '@/api/dashboard/PanelGroup'
+import { getIndicator, getKpiValue } from '@/api/dashboard'
 // import { mapActions } from 'vuex'
 export default {
   components: {
