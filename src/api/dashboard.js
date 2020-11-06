@@ -38,3 +38,11 @@ export function getDashboardlineChartDataApis(data) {
     data
   })
 }
+
+export function getDashboardPieChartDataApis(data) {
+  return request({
+    url: '/apis/dashboard/PieChart',
+    method: 'post',
+    data
+  })
+}
