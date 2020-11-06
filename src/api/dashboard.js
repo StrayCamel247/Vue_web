@@ -30,3 +30,11 @@ export function getDashboardBarChartDataApis(data) {
     data
   })
 }
+
+export function getDashboardlineChartDataApis(data) {
+  return request({
+    url: '/apis/dashboard/LineChart',
+    method: 'post',
+    data
+  })
+}

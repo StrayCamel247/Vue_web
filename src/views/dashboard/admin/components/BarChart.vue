@@ -55,7 +55,7 @@ export default {
     // 请求查询KPI接口
     getBarChartData() {
       getDashboardBarChartDataApis().then((res) => {
-        console.log('请求接口')
+        // console.log('请求接口')
         // this.xAxisData = res.content.xAxis_data
         this.xAxisData =
           res && res.content && res.content.xAxis_data
