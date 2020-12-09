@@ -25,6 +25,9 @@ const mutations = {
   },
   SET_ROLES: (state, roles) => {
     state.roles = roles
+  },
+  SET_PAGES: (state, pages) => {
+    state.pages = pages
   }
 }
 
@@ -51,7 +54,7 @@ const actions = {
     return new Promise((resolve, reject) => {
       getInfo({ token: state.token }).then(response => {
         const { content } = response
-        const { user, roles } = content
+        const { user, roles, pages } = content
         // console.log(response)
         if (!content) {
           reject('Verification failed, please Login again.')
@@ -65,6 +68,7 @@ const actions = {
         // }
 
         commit('SET_ROLES', roles)
+        commit('SET_PAGES', pages)
         commit('SET_NAME', username)
         commit('SET_AVATAR', avatar)
         commit('SET_INTRODUCTION', introduction)
