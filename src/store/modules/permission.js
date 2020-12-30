@@ -52,12 +52,17 @@ import Layout from '@/layout'
 
 /*
 因为import是静态执行的，不能使用表达式和变量，即在运行时才能拿到结果的语法结构（e.g. if…else…）
-参考https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/import
+参考
+https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/import
+https://blog.csdn.net/qq_45704048/article/details/109634554
 解决方法  构造import字典
 ===待优化===
 */
 const importDict = {
-  '@/views/icons/index': () => import('@/views/icons/index')
+  '@/views/icons/index': () => import('@/views/icons/index'),
+  '@/views/moofeng/index': () => import('@/views/moofeng/index'),
+  '@/views/moofeng/TotalStocks': () => import('@/views/moofeng/TotalStocks'),
+  '@/views/moofeng/ConvertibleStocks': () => import('@/views/moofeng/ConvertibleStocks')
 }
 export function filterRoutesViaPages(pages) {
   const res = []
@@ -106,7 +111,7 @@ const mutations = {
   SET_ROUTES: (state, routes) => {
     state.addRoutes = routes
     state.routes = constantRoutes.concat(routes)
-    // state.routes = constantRoutes
+    console.log(routes)
   }
 }
 
