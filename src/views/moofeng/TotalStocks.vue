@@ -271,7 +271,7 @@ export default {
       const { content } = await fetchstock(this.listQuery)
       const items = content.items
       this.list = items.map(v => {
-        v['edit'] = false
+        v['edit'] = ~v['readOnly']
         // this.$set(v, 'edit', false) // https://vuejs.org/v2/guide/reactivity.html
         v.originalTitle = v.code //  will be used when user click the cancel botton
         return v

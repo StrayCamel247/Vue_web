@@ -17,7 +17,7 @@ export function getIndicator() {
 
 export function getKpiValue(data) {
   return request({
-    url: '/apis/dashboard/kpi_value',
+    url: '/apis/dashboard/kpi-value',
     method: 'post',
     data
   })

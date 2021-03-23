@@ -161,7 +161,8 @@ export default {
           this.$store.dispatch('user/login', this.loginForm)
             .then(() => {
               console.log('登陆重定向 ')
-              this.$router.push({ path: this.redirect || '/', query: this.otherQuery })
+              this.$router.push({ path: '/', query: this.otherQuery })
+              console.log('登陆重定向完成')
               this.loading = false
             })
             .catch(() => {
